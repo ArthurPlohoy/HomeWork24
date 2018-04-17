@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+  <title>HW24</title></title>
+</head>
+<body>
+  <script type="text/javascript">
+		$(document).ready(function() {
+      $("#elems")[0].textContent = "elems: " + $("ol").children().length;
+      $('li:nth-child(2n+1)').css('background-color', '#888888');
+      $('li:nth-child(2n+2)').css('background-color', '#FFFFFF');
+      $('#theDiv').prepend($('<img>',{id:'theImg',src:'123.png'}))//добавить рисунок
+      $('body').css('background-color', '#C2C2C2')
+      $("ol").css("padding", "15px");
+      $("ol").css("margin-left", "20px");
+      $("ol").css("margin-right", "900px");
+      $("ol").css("text-align", "left");
+      $("li").css("padding", "5px");
+
+      $('li').dblclick( function(){
+  	     $(this).hide();//удаляет текст
+     });
+
+      $('li').on('click', function(){
+  	     $(this).css('text-decoration', 'line-through');//зачеркивает текст
+     });
+  });
+    </script>
+
+  <h1>My To Do List</h1>
+  <p id='elems'></p>
+   <ol>
+     <li>Sleep</li>
+     <li>Eat</li>
+     <li>Dream</li>
+     <li>Learn JS</li>
+     <li>Learn JQuery</li>
+   </ol>
+<div id="theDiv"></div>
+</body>
+</html>
